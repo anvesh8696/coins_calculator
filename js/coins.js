@@ -9,7 +9,7 @@ function init(e){
 	var $aside = document.getElementById('enter');
 
 	// If return key is pushed (keyno 13).
-     if($keynum == 13) {
+	if($keynum === 13) {
 		$aside.innerHTML = "";
 		calcCoins();
 	} else {
@@ -28,7 +28,7 @@ function calcCoins() {
 	var setFormState = function ($amount, $div, $state) {
 		$state ? $amount.classList.remove('redfail') : $amount.classList.add('redfail');
 		$div.innerHTML = "";
-	}
+	};
 
 	// Reset the form state.
 	setFormState($amount, $div, true);
@@ -71,7 +71,7 @@ function setCoinValues ($val) {
 
 	var $coinValues = [];
 	var $calc;
-	var $rem;
+
 	// Loop through each element of the array, the coins. 	 	
 	for (var $i = 0; $i < $coins.length; $i++) {
 
