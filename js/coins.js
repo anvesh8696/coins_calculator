@@ -1,6 +1,6 @@
 var CoinsCalculator = {};
 // An array of available coin values.
-	var $coins = [200, 100, 50, 20, 2, 1];
+var $coins = [200, 100, 50, 20, 2, 1];
 
 CoinsCalculator.init = function(e) {
 
@@ -17,7 +17,7 @@ CoinsCalculator.init = function(e) {
 		$aside.innerHTML = "Press the return key...";
 	}
 
-}
+};
 
 CoinsCalculator.calcCoins = function() {
 
@@ -66,7 +66,7 @@ CoinsCalculator.calcCoins = function() {
 		setFormState($amount, $div, false);
 	}
 
-}
+};
 
 CoinsCalculator.setCoinValues = function($val) {
 
@@ -85,7 +85,7 @@ CoinsCalculator.setCoinValues = function($val) {
 
 	return $coinValues;
 
-}
+};
 
 CoinsCalculator.getCoinValues = function($coinValues, $div) {
 
@@ -97,4 +97,4 @@ CoinsCalculator.getCoinValues = function($coinValues, $div) {
 
 	}
 
-}
+};
