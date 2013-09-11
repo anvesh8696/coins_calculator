@@ -1,7 +1,8 @@
+var CoinsCalculator = {};
 // An array of available coin values.
-var $coins = [200, 100, 50, 20, 2, 1];
+	var $coins = [200, 100, 50, 20, 2, 1];
 
-function init(e){
+CoinsCalculator.init = function(e) {
 
 	var $keynum;				
 	$keynum = e.keyCode;
@@ -11,14 +12,14 @@ function init(e){
 	// If return key is pushed (keyno 13).
 	if($keynum === 13) {
 		$aside.innerHTML = "";
-		calcCoins();
+		CoinsCalculator.calcCoins();
 	} else {
 		$aside.innerHTML = "Press the return key...";
 	}
 
 }
 
-function calcCoins() {
+CoinsCalculator.calcCoins = function() {
 
 	// Get the value of the textbox
 	var $amount = document.getElementById("amount");
@@ -56,10 +57,10 @@ function calcCoins() {
 		}
 		
 		// Call function to SET the coin values.
-		var $coinValues = setCoinValues($val);
+		var $coinValues = CoinsCalculator.setCoinValues($val);
 
 		// Output the values to the browser, GET.
-		getCoinValues($coinValues, $div);
+		CoinsCalculator.getCoinValues($coinValues, $div);
 
 	} else {
 		setFormState($amount, $div, false);
@@ -67,7 +68,7 @@ function calcCoins() {
 
 }
 
-function setCoinValues ($val) {
+CoinsCalculator.setCoinValues = function($val) {
 
 	var $coinValues = [];
 	var $calc;
@@ -86,7 +87,7 @@ function setCoinValues ($val) {
 
 }
 
-function getCoinValues ($coinValues, $div) {
+CoinsCalculator.getCoinValues = function($coinValues, $div) {
 
 	// Loop through values and output to the browser.
 	for(var $i = 0; $i < $coinValues.length; $i++) {
