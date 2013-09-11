@@ -4,7 +4,7 @@ var $coins = [200, 100, 50, 20, 2, 1];
 function init(e){
 
 	var $keynum;				
-	$keynum = e.which;
+	$keynum = e.keyCode;
 	
 	var $aside = document.getElementById('enter');
 
