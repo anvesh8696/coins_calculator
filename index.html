@@ -24,7 +24,7 @@
 		<p>The following characters are allowed: &pound;, p &amp; all numeric.</p>
 
 		<div id="field">
-			<input id="amount" name="amount" maxlength="21" type="text" placeholder="Please enter an amount of money." tabindex="1" onkeypress="return init(event)" />
+			<input id="amount" name="amount" maxlength="21" type="text" placeholder="Please enter an amount of money." tabindex="1" />
 			<aside id="enter"></aside>
 		</div>
 
@@ -32,5 +32,9 @@
 
 	</section>
 
+	<script>
+		// Event listener for amount field.
+		document.getElementById("amount").addEventListener("keydown", init, false);
+	</script>
 </body>
 </html>
